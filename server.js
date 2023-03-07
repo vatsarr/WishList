@@ -23,6 +23,10 @@ app.post("/wish", (req, res) => {
 
 const port = 5000;
 
-app.listen(port, () => {
+/* app.listen(port, () => {
   console.log(`Server is running on ${port}.`);
+}); */
+
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Server has started.");
 });
