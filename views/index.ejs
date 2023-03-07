@@ -10,14 +10,18 @@
   <body>
     <div class="container">
       <h1>My wishlist</h1>
-      <form action="/wish" method="POST">
+      <form action="/wish" method="POST" enctype="multipart/form-data">
         <input type="text" name="userWish" id="" placeholder="Add your wish" />
+        <input type="file" name="userFile" />
         <button type="submit">Add wish</button>
       </form>
       <div class="wishlist">
         <ul>
           <% for (let i = 0; i < myWishes.length; i++) { %>
-          <li><%= myWishes[i].description %></li>
+          <li>
+            <img src="<%= myWishes[i].imageURL %>" alt="" /><%=
+            myWishes[i].description %>
+          </li>
           <% } %>
         </ul>
       </div>

@@ -7,8 +7,9 @@ const filePath = path.join(
 );
 
 module.exports = class Wish {
-  constructor(wish) {
+  constructor(wish, imageURL) {
     this.description = wish;
+    this.imageURL = imageURL;
   }
 
   saveWish() {

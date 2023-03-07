@@ -21,5 +21,13 @@ h1 {
 }
 
 ul {
+  margin-top: 2rem;
   list-style: none;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
 }
